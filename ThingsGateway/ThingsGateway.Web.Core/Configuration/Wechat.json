@@ -1,0 +1,31 @@
+{
+    "$schema": "https://gitee.com/dotnetchina/Furion/raw/net6/schemas/v3/furion-schema.json",
+
+    "Wechat": {
+        // 公众号
+        "WechatAppId": "",
+        "WechatAppSecret": "",
+        "EncodingAESKey": "",
+        "Token": "",
+        // 小程序
+        "WxOpenAppId": "",
+        "WxOpenAppSecret": "",
+        "WxOpenToken": "",
+        "WxOpenEncodingAESKey": ""
+    },
+    // 微信支付
+    "WechatPay": {
+        "AppId": "", // 微信公众平台AppId、开放平台AppId、小程序AppId、企业微信CorpId
+        "MerchantId": "", // 商户平台的商户号
+        "MerchantV3Secret": "", // 商户平台的APIv3密钥
+        "MerchantCertificateSerialNumber": "", // 商户平台的证书序列号
+        "MerchantCertificatePrivateKey": "\\WxPayCert\\apiclient_key.pem" // 商户平台的API证书私钥(apiclient_key.pem文件内容)
+    },
+    // 支付回调
+    "PayCallBack": {
+        "WechatPayUrl": "/notify/weChatPay/unifiedorder", // 微信支付回调
+        "WechatRefundUrl": "/notify/weChatPay/refund", // 微信退款回调
+        "AlipayUrl": "", // 支付宝支付回调
+        "AlipayRefundUrl": "" // 支付宝退款回调
+    }
+}

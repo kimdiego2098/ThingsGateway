@@ -1,0 +1,28 @@
+{
+  "$schema": "https://gitee.com/dotnetchina/Furion/raw/net6/schemas/v3/furion-schema.json",
+
+  "DbConnection": {
+    "ConnectionConfigs": [
+      // 默认第一个为主库
+      {
+        "DbType": "Sqlite", // MySql、SqlServer、Sqlite、Oracle、PostgreSQL、Dm、Kdbndp、Oscar、MySqlConnector、Access
+        "ConnectionString": "DataSource=./Default.db",
+        "EnableInitDb": true, // 启用库表初始化
+        "EnableConsoleOut": false, // 启用控制台输出
+        "EnableDiffLog": true, // 启用库表差异日志
+        "EnableUnderLine": false // 启用驼峰转下划线
+      },
+      // 其他业务库
+      {
+        "ConfigId": "ThingsGateway",
+        "DbType": "Sqlite",
+        "ConnectionString": "DataSource=./ThingsGateway.db;", //DataSource=./ThingsGateway.db
+        "EnableInitDb": true, // 启用库表初始化
+        "EnableConsoleOut": true, // 启用控制台输出
+        "EnableDiffLog": true, // 启用库表差异日志
+        "EnableUnderLine": false // 启用驼峰转下划线
+      }
+    ]
+  }
+
+}

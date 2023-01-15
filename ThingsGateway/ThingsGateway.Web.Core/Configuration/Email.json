@@ -1,0 +1,14 @@
+{
+    "$schema": "https://gitee.com/dotnetchina/Furion/raw/net6/schemas/v3/furion-schema.json",
+
+  "Email": {
+    "Server": "smtp.qq.com", // 主机
+    "Port": 465, // 端口 465/994 25
+    "SenderName": "系统邮件", // 发送者名称
+    "SenderEmail": "2248356998@qq.com", // 发件者邮箱
+    "ToEmail": "2248356998@qq.com", // 接收人邮箱
+    "Account": "", // 发件邮箱账号
+    "Password": "", // 发件邮箱密码
+    "Security": true // 启用SSL和TLS
+  }
+}

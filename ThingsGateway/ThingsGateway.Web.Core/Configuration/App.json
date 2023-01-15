@@ -1,0 +1,29 @@
+{
+  "$schema": "https://gitee.com/dotnetchina/Furion/raw/net6/schemas/v3/furion-schema.json",
+
+  "AllowedHosts": "*",
+
+  "AppSettings": {
+    "InjectSpecificationDocument": true // 生产环境是否开启Swagger
+  },
+
+  "DynamicApiControllerSettings": {
+    "LowercaseRoute": false,
+    "KeepName": true,
+    "AsLowerCamelCase": true, // 小驼峰路由路径
+  },
+
+  "FriendlyExceptionSettings": {
+    "DefaultErrorMessage": "系统异常，请联系管理员",
+    "ThrowBah": true,
+    "LogError": false // 是否输出异常日志，默认true
+  },
+  "LocalizationSettings": {
+    "SupportedCultures": [ "zh-CN", "en-US" ], // 语言列表
+    "DefaultCulture": "zh-CN" // 默认语言
+  },
+  "CorsAccessorSettings": {
+    "WithExposedHeaders": [ "Content-Disposition" ], // 如果前端不代理且是axios请求
+    "SignalRSupport": true // 启用 SignalR 跨域支持
+  }
+}

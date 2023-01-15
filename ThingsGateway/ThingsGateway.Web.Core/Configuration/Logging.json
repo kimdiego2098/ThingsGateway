@@ -1,0 +1,43 @@
+{
+  "$schema": "https://gitee.com/dotnetchina/Furion/raw/net6/schemas/v3/furion-schema.json",
+
+  "Logging": {
+    "LogLevel": {
+      "Default": "Trace",
+      "Console": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    },
+    "Console": {
+      "LogLevel": {
+        "Default": "Trace"
+      }
+    },
+    "File": {
+      "Enabled": true, // 启用文件日志
+      "FileName": "logs/{0:yyyyMMdd}_{1}.log", // 日志文件
+      "Append": true, // 追加覆盖
+      "MinimumLevel": "Information", // 日志级别
+      "FileSizeLimitBytes": 10485760, // 10M=10*1024*1024
+      "MaxRollingFiles": 30 // 只保留30个文件
+    },
+    "Database": {
+      "Enabled": true, // 启用数据库日志
+      "MinimumLevel": "Debug"
+    },
+    "ElasticSearch": {
+      "Enabled": false, // 启用ES日志
+      "ServerUris": [ "http://dilon:123456@192.168.1.100:9200" ], // 地址
+      "DefaultIndex": "adminnet" // 索引
+    },
+    "Monitor": {
+      "GlobalEnabled": true, // 启用全局拦截日志
+      "IncludeOfMethods": [], // 拦截特定方法，当GlobalEnabled=false有效
+      "ExcludeOfMethods": [], // 排除特定方法，当GlobalEnabled=true有效
+      "BahLogLevel": "Information", // Oops.Oh 和 Oops.Bah 业务日志输出级别
+      "WithReturnValue": true, // 配置是否包含返回值，默认true
+      "ReturnValueThreshold": 500, // 配置返回值字符串阈值，默认0全量输出
+      "JsonBehavior": "None", // 配置Json输出行为，默认None(OnlyJson、All)
+      "UseUtcTimestamp": false // 时间格式UTC、LOCAL
+    }
+  }
+}

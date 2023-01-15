@@ -1,0 +1,20 @@
+{
+    "$schema": "https://gitee.com/dotnetchina/Furion/raw/net6/schemas/v3/furion-schema.json",
+
+    "Upload": {
+        "Path": "upload/{yyyy}/{MM}/{dd}", // 文件上传目录
+        "MaxSize": 1048576,
+        "ContentType": [ "image/jpg", "image/png", "image/jpeg", "image/gif", "image/bmp", "text/plain", "application/pdf", "application/msword", "application/vnd.ms-excel", "application/vnd.ms-powerpoint", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ]
+    },
+    "OSSProvider": {
+        "IsEnable": false,
+        "Provider": "Aliyun", // Invalid/Minio/Aliyun/QCloud/Qiniu/HuaweiCloud
+        "Endpoint": "",
+        "Region": "",
+        "AccessKey": "",
+        "SecretKey": "",
+        "IsEnableHttps": true,
+        "IsEnableCache": true,
+        "Bucket": ""
+    }
+}

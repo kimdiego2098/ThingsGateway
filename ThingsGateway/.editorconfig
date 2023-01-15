@@ -1,0 +1,168 @@
+﻿[*.cs]
+
+# CS8632: 只能在 "#nullable" 注释上下文内的代码中使用可为 null 的引用类型的注释。
+dotnet_diagnostic.CS8632.severity = silent
+csharp_using_directive_placement = outside_namespace:silent
+csharp_style_expression_bodied_methods = false:silent
+csharp_style_expression_bodied_constructors = false:silent
+csharp_style_expression_bodied_operators = false:silent
+csharp_style_expression_bodied_properties = true:silent
+csharp_style_expression_bodied_indexers = true:silent
+csharp_style_expression_bodied_accessors = true:silent
+csharp_style_expression_bodied_lambdas = true:silent
+csharp_style_expression_bodied_local_functions = false:silent
+csharp_style_conditional_delegate_call = true:suggestion
+
+
+#### 命名样式 ####
+
+# 命名规则
+
+dotnet_naming_rule.interface_should_be_begins_with_i.severity = suggestion
+dotnet_naming_rule.interface_should_be_begins_with_i.symbols = interface
+dotnet_naming_rule.interface_should_be_begins_with_i.style = begins_with_i
+
+dotnet_naming_rule.types_should_be_pascal_case.severity = suggestion
+dotnet_naming_rule.types_should_be_pascal_case.symbols = types
+dotnet_naming_rule.types_should_be_pascal_case.style = pascal_case
+
+dotnet_naming_rule.non_field_members_should_be_pascal_case.severity = suggestion
+dotnet_naming_rule.non_field_members_should_be_pascal_case.symbols = non_field_members
+dotnet_naming_rule.non_field_members_should_be_pascal_case.style = pascal_case
+
+# 符号规范
+
+dotnet_naming_symbols.interface.applicable_kinds = interface
+dotnet_naming_symbols.interface.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.interface.required_modifiers =
+
+dotnet_naming_symbols.types.applicable_kinds = class, struct, interface, enum
+dotnet_naming_symbols.types.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.types.required_modifiers =
+
+dotnet_naming_symbols.non_field_members.applicable_kinds = property, event, method
+dotnet_naming_symbols.non_field_members.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.non_field_members.required_modifiers =
+
+# 命名样式
+
+dotnet_naming_style.begins_with_i.required_prefix = I
+dotnet_naming_style.begins_with_i.required_suffix =
+dotnet_naming_style.begins_with_i.word_separator =
+dotnet_naming_style.begins_with_i.capitalization = pascal_case
+
+dotnet_naming_style.pascal_case.required_prefix =
+dotnet_naming_style.pascal_case.required_suffix =
+dotnet_naming_style.pascal_case.word_separator =
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+dotnet_naming_style.pascal_case.required_prefix =
+dotnet_naming_style.pascal_case.required_suffix =
+dotnet_naming_style.pascal_case.word_separator =
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+# IDE0090: 使用 "new(...)"
+dotnet_diagnostic.IDE0090.severity = silent
+
+# IDE0057: 使用范围运算符
+dotnet_diagnostic.IDE0057.severity = silent
+
+# CS1591: 缺少对公共可见类型或成员的 XML 注释
+dotnet_diagnostic.CS1591.severity = silent
+
+# IDE1006: 命名样式
+dotnet_diagnostic.IDE1006.severity = silent
+
+# CS0649: 从未对字段“Form1.container”赋值，字段将一直保持其默认值 null
+dotnet_diagnostic.CS0649.severity = silent
+
+# CS8603: 可能返回 null 引用。
+dotnet_diagnostic.CS8603.severity = none
+
+# BL0007: 可能返回 null 引用。
+dotnet_diagnostic.BL0007.severity = none
+
+# CS8604: 可能返回 null 引用。
+dotnet_diagnostic.CS8604.severity = none
+
+
+[*.vb]
+#### 命名样式 ####
+
+# 命名规则
+
+dotnet_naming_rule.interface_should_be_以_i_开始.severity = suggestion
+dotnet_naming_rule.interface_should_be_以_i_开始.symbols = interface
+dotnet_naming_rule.interface_should_be_以_i_开始.style = 以_i_开始
+
+dotnet_naming_rule.类型_should_be_帕斯卡拼写法.severity = suggestion
+dotnet_naming_rule.类型_should_be_帕斯卡拼写法.symbols = 类型
+dotnet_naming_rule.类型_should_be_帕斯卡拼写法.style = 帕斯卡拼写法
+
+dotnet_naming_rule.非字段成员_should_be_帕斯卡拼写法.severity = suggestion
+dotnet_naming_rule.非字段成员_should_be_帕斯卡拼写法.symbols = 非字段成员
+dotnet_naming_rule.非字段成员_should_be_帕斯卡拼写法.style = 帕斯卡拼写法
+
+# 符号规范
+
+dotnet_naming_symbols.interface.applicable_kinds = interface
+dotnet_naming_symbols.interface.applicable_accessibilities = public, friend, private, protected, protected_friend, private_protected
+dotnet_naming_symbols.interface.required_modifiers =
+
+dotnet_naming_symbols.类型.applicable_kinds = class, struct, interface, enum
+dotnet_naming_symbols.类型.applicable_accessibilities = public, friend, private, protected, protected_friend, private_protected
+dotnet_naming_symbols.类型.required_modifiers =
+
+dotnet_naming_symbols.非字段成员.applicable_kinds = property, event, method
+dotnet_naming_symbols.非字段成员.applicable_accessibilities = public, friend, private, protected, protected_friend, private_protected
+dotnet_naming_symbols.非字段成员.required_modifiers =
+
+# 命名样式
+
+dotnet_naming_style.以_i_开始.required_prefix = I
+dotnet_naming_style.以_i_开始.required_suffix =
+dotnet_naming_style.以_i_开始.word_separator =
+dotnet_naming_style.以_i_开始.capitalization = pascal_case
+
+dotnet_naming_style.帕斯卡拼写法.required_prefix =
+dotnet_naming_style.帕斯卡拼写法.required_suffix =
+dotnet_naming_style.帕斯卡拼写法.word_separator =
+dotnet_naming_style.帕斯卡拼写法.capitalization = pascal_case
+
+dotnet_naming_style.帕斯卡拼写法.required_prefix =
+dotnet_naming_style.帕斯卡拼写法.required_suffix =
+dotnet_naming_style.帕斯卡拼写法.word_separator =
+dotnet_naming_style.帕斯卡拼写法.capitalization = pascal_case
+
+[*.{cs,vb}]
+end_of_line = crlf
+dotnet_style_qualification_for_field = false:silent
+dotnet_style_qualification_for_property = false:silent
+dotnet_style_qualification_for_method = false:silent
+dotnet_diagnostic.CA2215.severity = suggestion
+
+[*.{cs,vb}]
+end_of_line = crlf
+dotnet_style_qualification_for_field = false:silent
+dotnet_style_qualification_for_property = false:silent
+dotnet_style_qualification_for_method = false:silent
+dotnet_diagnostic.CS3002.severity = silent
+dotnet_diagnostic.CS3001.severity = silent
+dotnet_diagnostic.CS3003.severity = silent
+dotnet_diagnostic.CS3008.severity = silent
+dotnet_diagnostic.CS3015.severity = silent
+dotnet_diagnostic.CS3026.severity = silent
+
+# IDE0044: 添加只读修饰符
+dotnet_diagnostic.IDE0044.severity = none
+
+# IDE0037: 使用推断的成员名称
+dotnet_diagnostic.IDE0037.severity = silent
+
+# IDE0017: 简化对象初始化
+dotnet_diagnostic.IDE0017.severity = silent
+
+# IDE0220: 添加显式转换
+dotnet_diagnostic.IDE0220.severity = silent
+dotnet_style_qualification_for_event = false:silent
+

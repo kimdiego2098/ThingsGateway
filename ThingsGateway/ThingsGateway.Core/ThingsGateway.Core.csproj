@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<LangVersion>latestMajor</LangVersion>
+		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Version>1.2.0</Version>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+	</PropertyGroup>
+
+
+
+	<ItemGroup>
+		<PackageReference Include="AspNetCoreRateLimit" Version="5.0.0" />
+		<PackageReference Include="Furion.Extras.Authentication.JwtBearer" Version="4.8.4.12" />
+		<PackageReference Include="Lazy.Captcha.Core" Version="2.0.0" />
+		<PackageReference Include="DotNetCore.Natasha.CSharp" Version="5.0.2" />
+
+		<PackageReference Include="Magicodes.IE.AspNetCore" Version="2.7.4.2" />
+		<PackageReference Include="Magicodes.IE.Excel" Version="2.7.4.2" />
+		<PackageReference Include="Magicodes.IE.Excel.AspNetCore" Version="2.7.4.2" />
+		<PackageReference Include="Magicodes.IE.Pdf" Version="2.7.4.2" />
+		<PackageReference Include="Furion.Pure" Version="4.8.4.12" />
+		<PackageReference Include="NEST" Version="7.17.5" />
+		<PackageReference Include="NETCore.MailKit" Version="2.1.0" />
+		<PackageReference Include="NewLife.Redis" Version="5.1.2023.101" />
+		<PackageReference Include="OnceMi.AspNetCore.OSS" Version="1.1.9" />
+		<PackageReference Include="SKIT.FlurlHttpClient.Wechat.Api" Version="2.21.1" />
+		<PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.24" />
+		<PackageReference Include="UAParser" Version="3.1.47" />
+		<PackageReference Include="Yitter.IdGenerator" Version="1.0.14" />
+		<PackageReference Include="Furion.Extras.ObjectMapper.Mapster" Version="4.8.4.12" />
+		<PackageReference Include="SqlSugarCore" Version="5.1.3.43" />
+		<PackageReference Include="Masuit.Tools.Core" Version="2.5.9.1" />
+	</ItemGroup>
+
+</Project>

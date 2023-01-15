@@ -1,0 +1,7 @@
+{
+  "MqttServer": {
+    "Port": 1883,
+    "EnableTls": false,
+    "TlsPort": 8883
+  }
+}

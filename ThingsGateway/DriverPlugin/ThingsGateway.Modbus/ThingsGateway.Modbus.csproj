@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<LangVersion>latestMajor</LangVersion>
+		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<Version>1.2.0</Version>
+		<RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+		<EnableDynamicLoading>true</EnableDynamicLoading>
+		<CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+
+		<Exec Condition="'$(Configuration)' == 'Debug' And '$(TargetFramework)' == 'net6.0'" Command=" set dir=&quot;$(SolutionDir)ThingsGateway.Web.Entry\bin\Debug\net6.0\Drivers\&quot;&#xD;&#xA; if not exist %dir%  md %dir%  &#xD;&#xA;copy &quot;$(TargetDir)*Modbus*.dll&quot;  %dir%" />
+		<Exec Condition="'$(Configuration)' == 'Release' And '$(TargetFramework)' == 'net6.0'" Command=" set dir=&quot;$(SolutionDir)ThingsGateway.Web.Entry\bin\Release\net6.0\Drivers\&quot;&#xD;&#xA; if not exist %dir%  md %dir%  &#xD;&#xA;copy &quot;$(TargetDir)*Modbus*.dll&quot;  %dir%" />
+		<Exec Condition="'$(Configuration)' == 'Debug' And '$(TargetFramework)' == 'net7.0'" Command=" set dir=&quot;$(SolutionDir)ThingsGateway.Web.Entry\bin\Debug\net7.0\Drivers\&quot;&#xD;&#xA; if not exist %dir%  md %dir%  &#xD;&#xA;copy &quot;$(TargetDir)*Modbus*.dll&quot;  %dir%" />
+		<Exec Condition="'$(Configuration)' == 'Release' And '$(TargetFramework)' == 'net7.0'" Command=" set dir=&quot;$(SolutionDir)ThingsGateway.Web.Entry\bin\Release\net7.0\Drivers\&quot;&#xD;&#xA; if not exist %dir%  md %dir%  &#xD;&#xA;copy &quot;$(TargetDir)*Modbus*.dll&quot;  %dir%" />
+	
+	</Target>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\ThingsGateway.Application.Core\ThingsGateway.Application.Core.csproj" />
+		<ProjectReference Include="..\ThingsGateway.Foundation.Adapter.Modbus\ThingsGateway.Foundation.Adapter.Modbus.csproj" />
+	</ItemGroup>
+
+
+</Project>

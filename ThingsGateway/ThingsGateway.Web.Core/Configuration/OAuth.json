@@ -1,0 +1,10 @@
+{
+    "$schema": "https://gitee.com/dotnetchina/Furion/raw/net6/schemas/v3/furion-schema.json",
+
+    "OAuth": {
+        "Weixin": {
+            "ClientId": "wxd77174ddc828b65b",
+            "ClientSecret": "6224502b24d31acf8b4e0dc8e482317c"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<LangVersion>latestMajor</LangVersion>
+		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Version>1.2.0</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="AppConfig.json" />
+	  <None Remove="Configuration\HttpServer.json" />
+	  <None Remove="Configuration\MqttServer.json" />
+	  <None Remove="CoreConfig.json" />
+	  <None Remove="HttpServer.json" />
+	  <None Remove="MqttServer.json" />
+	  <None Remove="RateLimitConfig.json" />
+	  <None Remove="SpecificationDocumentSettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Configuration\HttpServer.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Configuration\MqttServer.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\ThingsGateway.Application.Core\ThingsGateway.Application.Core.csproj" />
+	</ItemGroup>
+
+	
+
+</Project>

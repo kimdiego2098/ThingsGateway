@@ -1,0 +1,8 @@
+{
+    "$schema": "https://gitee.com/dotnetchina/Furion/raw/net6/schemas/v3/furion-schema.json",
+
+    "Cache": {
+        "CacheType": "Memory", // Memory、Redis
+        "RedisConnectionString": "server=127.0.0.1:6379;password=;db=5;"
+    }
+}

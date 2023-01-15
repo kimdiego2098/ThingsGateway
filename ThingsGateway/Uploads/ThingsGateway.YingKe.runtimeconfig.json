@@ -1,0 +1,20 @@
+{
+  "runtimeOptions": {
+    "tfm": "net6.0",
+    "rollForward": "LatestMinor",
+    "frameworks": [
+      {
+        "name": "Microsoft.NETCore.App",
+        "version": "6.0.0"
+      },
+      {
+        "name": "Microsoft.AspNetCore.App",
+        "version": "6.0.0"
+      }
+    ],
+    "configProperties": {
+      "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,
+      "System.Reflection.NullabilityInfoContext.IsSupported": true
+    }
+  }
+}

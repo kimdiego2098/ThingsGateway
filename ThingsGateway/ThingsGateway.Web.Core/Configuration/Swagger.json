@@ -1,0 +1,66 @@
+{
+  "$schema": "https://gitee.com/dotnetchina/Furion/raw/net6/schemas/v3/furion-schema.json",
+
+  "SpecificationDocumentSettings": {
+    "DocumentTitle": "ThingsGateway",
+    "GroupOpenApiInfos": [
+      {
+        "Group": "Application",
+        "Title": "ThingsGateway物联网关配置接口",
+        "Description": "作者By Diego,QQ2248356998 框架系统参考或集成以下开源系统，在此感谢！<br/> <a href='https://gitee.com/zuohuaijun/Admin.NET/'>Admin.NET</a><br/> <a href='https://gitee.com/dotnetchina/TouchSocket'>TouchSocket</a>",
+        "TermsOfService": "",
+        "Version": "1.0.0",
+        "Contact": {
+          "Name": "Diego",
+          "Url": "",
+          "Email": "2248356998@qq.com"
+        }
+      },
+      {
+        "Group": "ApplicationRunTime",
+        "Title": "ThingsGateway物联网关监视接口",
+        "Description": "作者By Diego,QQ2248356998 框架系统参考或集成以下开源系统，在此感谢！<br/> <a href='https://gitee.com/zuohuaijun/Admin.NET/'>Admin.NET</a><br/> <a href='https://gitee.com/dotnetchina/TouchSocket'>TouchSocket</a>",
+        "TermsOfService": "",
+        "Version": "1.0.0",
+        "Contact": {
+          "Name": "Diego",
+          "Url": "",
+          "Email": "2248356998@qq.com"
+        }
+      },
+      {
+        "Group": "Default",
+        "Title": "ThingsGateway物联网关核心接口",
+        "Description": "作者By Diego,QQ2248356998 框架系统参考或集成以下开源系统，在此感谢！<br/> <a href='https://gitee.com/zuohuaijun/Admin.NET/'>Admin.NET</a><br/> <a href='https://gitee.com/dotnetchina/TouchSocket'>TouchSocket</a>",
+        //"TermsOfService": "",
+        "Version": "1.0.0",
+        "Contact": {
+          "Name": "Diego",
+          //"Url": "",
+          "Email": "2248356998@qq.com"
+        }
+      },
+      {
+        "Group": "All Groups",
+        "Title": "ThingsGateway物联网关全部接口",
+        "Description": "作者By Diego,QQ2248356998 框架系统参考或集成以下开源系统，在此感谢！<br/> <a href='https://gitee.com/zuohuaijun/Admin.NET/'>Admin.NET</a><br/> <a href='https://gitee.com/dotnetchina/TouchSocket'>TouchSocket</a>",
+        //"TermsOfService": "",
+        "Version": "1.0.0",
+        "Contact": {
+          "Name": "Diego",
+          //"Url": "",
+          "Email": "2248356998@qq.com"
+        }
+      }
+    ],
+    "EnableAllGroups": true,
+    "EnableEnumSchemaFilter": true,
+    "LoginInfo": {
+      "Enabled": false, // 是否开启Swagger登录
+      "CheckUrl": "/Swagger/CheckUrl",
+      "SubmitUrl": "/Swagger/SubmitUrl",
+      "UserName": "admin",
+      "Password": "000000"
+    }
+  }
+}

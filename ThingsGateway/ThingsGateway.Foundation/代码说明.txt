@@ -1,0 +1,13 @@
+﻿该程序代码由三大部分组成，网络来源、开源程序集以及自编代码。Diego仅享有自编代码版权，且只为自编代码授权。
+其中代码版权说明由于是工具生成，所以会对非自编代码也标注，但是我们会在类注释中说明，
+
+例如：
+1、TouchSocket文件夹下代码，来源于TouchSocket，所以已在类注释中说明。
+修改内容：
+1）ThingsGatewayBitConverter改完ThingsGatewayBitConverter,添加4字节数据转换格式等
+2）IResult.cs;Result.cs
+
+2、Extensions文件夹下代码，代码部分来源于自编/RRQM/HslCommunication，积累下来已分不清来源，特此说明
+
+感谢！！
+感谢所有第三方代码的开源贡献。

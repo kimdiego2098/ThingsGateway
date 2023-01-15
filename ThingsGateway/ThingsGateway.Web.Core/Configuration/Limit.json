@@ -1,0 +1,119 @@
+{
+    // IP限流配置
+    "IpRateLimiting": {
+        // 例如:设置每分钟5次访问限流
+        // 当False时：每个接口都加入计数，不管你访问哪个接口，只要在一分钟内累计够5次，将禁止访问。
+        // 当True 时：当一分钟请求了5次GetData接口，则该接口将在时间段内禁止访问，但是还可以访问PostData()5次,总得来说是每个接口都有5次在这一分钟，互不干扰。
+        "EnableEndpointRateLimiting": true,
+        // 如果StackBlockedRequests设置为false，拒绝的API调用不会添加到调用次数计数器上。比如：如果客户端每秒发出3个请求并且您设置了每秒一个调用的限制，
+        // 则每分钟或每天计数器等其他限制将仅记录第一个调用，即成功的API调用。如果您希望被拒绝的API调用计入其他时间的显示（分钟，小时等），则必须设置
+        "StackBlockedRequests": false,
+        // 在RealIpHeader使用时，你的Kestrel服务器背后是一个反向代理，如果你的代理服务器使用不同的页眉然后提取客户端IP X-Real-IP使用此选项来设置它。
+        "RealIpHeader": "X-Real-IP",
+        // 将ClientIdHeader被用于提取白名单的客户端ID。如果此标头中存在客户端ID并且与ClientWhitelist中指定的值匹配，则不应用速率限制。
+        "ClientIdHeader": "X-ClientId",
+        // IP白名单:支持Ipv4和Ipv6
+        "IpWhitelist": [],
+        // 端点白名单
+        "EndpointWhitelist": [],
+        // 客户端白名单
+        "ClientWhitelist": [],
+        "QuotaExceededResponse": {
+            "Content": "{{\"code\":429,\"type\":\"error\",\"message\":\"访问过于频繁,请稍后重试!\",\"result\":null,\"extras\":null}}",
+            "ContentType": "application/json",
+            "StatusCode": 429
+        },
+        // 返回状态码
+        "HttpStatusCode": 429,
+        // API规则,结尾一定要带*
+        "GeneralRules": [
+            // 1秒钟只能调用1次
+            {
+                "Endpoint": "*",
+                "Period": "1s",
+                "Limit": 10
+            },
+            // 1分钟只能调用100次
+            {
+                "Endpoint": "*",
+                "Period": "1m",
+                "Limit": 1000
+            },
+            // 1小时只能调用1000
+            {
+                "Endpoint": "*",
+                "Period": "1h",
+                "Limit": 10000
+            },
+            // 1天只能调用10000次
+            {
+                "Endpoint": "*",
+                "Period": "1d",
+                "Limit": 1000000
+            }
+        ]
+    },
+    "IpRateLimitPolicies": {
+        "IpRules": [
+            {
+                "Ip": "XXX.XXX.XXX.XXX",
+                "Rules": [
+                    {
+                        "Endpoint": "*",
+                        "Period": "1s",
+                        "Limit": 10
+                    },
+                    {
+                        "Endpoint": "*",
+                        "Period": "1m",
+                        "Limit": 1000
+                    }
+                ]
+            }
+        ]
+    },
+    // 客户端限流配置
+    "ClientRateLimiting": {
+        "EnableEndpointRateLimiting": true,
+        "ClientIdHeader": "X-ClientId",
+        "EndpointWhitelist": [],
+        "ClientWhitelist": [],
+        "QuotaExceededResponse": {
+            "Content": "{{\"code\":429,\"type\":\"error\",\"message\":\"访问人数过多,请稍后重试!\",\"result\":null,\"extras\":null}}",
+            "ContentType": "application/json",
+            "StatusCode": 429
+        },
+        "HttpStatusCode": 429,
+        "GeneralRules": [
+            {
+                "Endpoint": "*",
+                "Period": "1s",
+                "Limit": 10
+            },
+            {
+                "Endpoint": "*",
+                "Period": "1m",
+                "Limit": 1000
+            }
+        ]
+    },
+    "ClientRateLimitPolicies": {
+        "ClientRules": [
+            {
+                "ClientId": "xxx-xxx",
+                "Rules": [
+                    {
+                        "Endpoint": "*",
+                        "Period": "1s",
+                        "Limit": 10
+                    },
+                    {
+                        "Endpoint": "*",
+                        "Period": "1m",
+                        "Limit": 1000
+                    }
+                ]
+            }
+        ]
+    }
+}

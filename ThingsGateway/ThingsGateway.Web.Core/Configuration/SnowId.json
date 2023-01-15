@@ -1,0 +1,7 @@
+{
+    "$schema": "https://gitee.com/dotnetchina/Furion/raw/net6/schemas/v3/furion-schema.json",
+
+    "SnowId": {
+        "WorkerId": 5 // 取值范围0~63,默认5
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "HttpServer": {
+    "Port": 5004,
+    "HttpsEnable": false,
+    "HttpsPort": 0
+  }
+}

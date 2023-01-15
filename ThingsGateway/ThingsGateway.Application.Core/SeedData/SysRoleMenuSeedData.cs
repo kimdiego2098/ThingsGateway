@@ -1,0 +1,129 @@
+namespace ThingsGateway.Application.Core;
+
+/// <summary>
+/// 系统角色菜单表种子数据
+/// </summary>
+public class SysRoleMenuSeedData : ISqlSugarEntitySeedData<SysRoleMenu>
+{
+    /// <summary>
+    /// 种子数据
+    /// </summary>
+    /// <returns></returns>
+    [IgnoreUpdate]
+    public IEnumerable<SysRoleMenu> HasData()
+    {
+        return new[]
+        {
+            // 数据面板【admin/252885263103721】
+            //new SysRoleMenu{ Id=552885263003000, RoleId=252885263103721, MenuId=552885263002100 },
+            //new SysRoleMenu{ Id=552885263003001, RoleId=252885263103721, MenuId=552885263002110 },
+            //new SysRoleMenu{ Id=552885263003002, RoleId=252885263103721, MenuId=552885263002111 },
+
+
+            new SysRoleMenu{ Id=652885263003100, RoleId=252885263103721, MenuId=411311111311111 },
+            new SysRoleMenu{ Id=652885263003101, RoleId=252885263103721, MenuId=411311111321111 },
+            new SysRoleMenu{ Id=652885263003102, RoleId=252885263103721, MenuId=411311111321112 },
+            new SysRoleMenu{ Id=652885263003103, RoleId=252885263103721, MenuId=411311111321113 },
+            new SysRoleMenu{ Id=652885263003104, RoleId=252885263103721, MenuId=411311111321114 },
+
+            new SysRoleMenu{ Id=652885263003200, RoleId=252885263103721, MenuId=411311111411111 },
+            new SysRoleMenu{ Id=652885263003201, RoleId=252885263103721, MenuId=411311111421111 },
+            new SysRoleMenu{ Id=652885263003202, RoleId=252885263103721, MenuId=411311111421112 },
+            new SysRoleMenu{ Id=652885263003203, RoleId=252885263103721, MenuId=411311111421113 },
+            new SysRoleMenu{ Id=652885263003204, RoleId=252885263103721, MenuId=411311111421114 },
+            new SysRoleMenu{ Id=652885263003205, RoleId=252885263103721, MenuId=411311111421115 },
+            new SysRoleMenu{ Id=652885263003206, RoleId=252885263103721, MenuId=411311111421116 },
+            new SysRoleMenu{ Id=652885263003207, RoleId=252885263103721, MenuId=411311111421117 },
+
+            new SysRoleMenu{ Id=652885263003300, RoleId=252885263103721, MenuId=411311111511111 },
+            new SysRoleMenu{ Id=652885263003301, RoleId=252885263103721, MenuId=411311111521111 },
+            new SysRoleMenu{ Id=652885263003302, RoleId=252885263103721, MenuId=411311111521112 },
+            new SysRoleMenu{ Id=652885263003303, RoleId=252885263103721, MenuId=411311111521113 },
+            new SysRoleMenu{ Id=652885263003304, RoleId=252885263103721, MenuId=411311111521114 },
+            new SysRoleMenu{ Id=652885263003305, RoleId=252885263103721, MenuId=411311111521115 },
+            new SysRoleMenu{ Id=652885263003306, RoleId=252885263103721, MenuId=411311111521116 },
+
+            new SysRoleMenu{ Id=652885263003400, RoleId=252885263103721, MenuId=411211111131111 },
+            new SysRoleMenu{ Id=652885263003401, RoleId=252885263103721, MenuId=411211111132111 },
+
+            new SysRoleMenu{ Id=652885263003500, RoleId=252885263103721, MenuId=411211111141111 },
+            new SysRoleMenu{ Id=652885263003501, RoleId=252885263103721, MenuId=411211111142111 },
+
+            new SysRoleMenu{ Id=652885263003600, RoleId=252885263103721, MenuId=411211111151111 },
+            new SysRoleMenu{ Id=652885263003601, RoleId=252885263103721, MenuId=411211111162111 },
+
+
+            new SysRoleMenu{ Id=652885263003700, RoleId=252885263103721, MenuId=411111111131158 },
+            new SysRoleMenu{ Id=652885263003701, RoleId=252885263103721, MenuId=411111111151158 },
+
+
+            new SysRoleMenu{ Id=652885263003710, RoleId=252885263103721, MenuId=411111111131258 },
+            new SysRoleMenu{ Id=652885263003711, RoleId=252885263103721, MenuId=411111111151258 },
+
+            new SysRoleMenu{ Id=652885263003720, RoleId=252885263103721, MenuId=411111111131358 },
+            new SysRoleMenu{ Id=652885263003721, RoleId=252885263103721, MenuId=411111111151358 },
+            new SysRoleMenu{ Id=652885263003722, RoleId=252885263103721, MenuId=411111111151360 },
+
+
+
+
+            new SysRoleMenu{ Id=652885263003810, RoleId=252885263103721, MenuId=421111111131258 },
+            new SysRoleMenu{ Id=652885263003811, RoleId=252885263103721, MenuId=421111111151258 },
+
+            new SysRoleMenu{ Id=652885263003820, RoleId=252885263103721, MenuId=421111111131358 },
+            new SysRoleMenu{ Id=652885263003821, RoleId=252885263103721, MenuId=421111111151358 },
+            new SysRoleMenu{ Id=652885263003822, RoleId=252885263103721, MenuId=421111111151360 },
+
+
+
+            new SysRoleMenu{ Id=652885263004200, RoleId=252885263103721, MenuId=440000000000001 },
+            new SysRoleMenu{ Id=652885263004201, RoleId=252885263103721, MenuId=440000000000100 },
+            new SysRoleMenu{ Id=652885263004202, RoleId=252885263103721, MenuId=440000000000101 },
+            new SysRoleMenu{ Id=652885263004203, RoleId=252885263103721, MenuId=440000000000102 },
+            new SysRoleMenu{ Id=652885263004204, RoleId=252885263103721, MenuId=440000000000103 },
+
+
+            new SysRoleMenu{ Id=652885263005200, RoleId=252885263103721, MenuId=440000000002223 },
+            new SysRoleMenu{ Id=652885263005201, RoleId=252885263103721, MenuId=440000000003333 },
+            new SysRoleMenu{ Id=652885263005202, RoleId=252885263103721, MenuId=440000000003334 },
+            new SysRoleMenu{ Id=652885263005203, RoleId=252885263103721, MenuId=440000000003335 },
+            new SysRoleMenu{ Id=652885263005204, RoleId=252885263103721, MenuId=440000000003336 },
+            new SysRoleMenu{ Id=652885263005205, RoleId=252885263103721, MenuId=440000000003337 },
+            new SysRoleMenu{ Id=652885263005206, RoleId=252885263103721, MenuId=440000000003338 },
+            new SysRoleMenu{ Id=652885263005207, RoleId=252885263103721, MenuId=440000000003339 },
+
+
+
+
+            new SysRoleMenu{ Id=652885264003700, RoleId=252885263103721, MenuId=441000000000100 },
+            new SysRoleMenu{ Id=652885264003701, RoleId=252885263103721, MenuId=441000000000101 },
+
+
+            new SysRoleMenu{ Id=652885264003710, RoleId=252885263103721, MenuId=442000000003356 },
+            new SysRoleMenu{ Id=652885264003711, RoleId=252885263103721, MenuId=442000000003556 },
+
+            //// 个人中心
+            new SysRoleMenu{ Id=552885263003151, RoleId=252885263103721, MenuId=252885263055260 },
+            new SysRoleMenu{ Id=552885263003152, RoleId=252885263103721, MenuId=252885263055261 },
+            //new SysRoleMenu{ Id=552885263003153, RoleId=252885263103721, MenuId=252885263055262 },
+            new SysRoleMenu{ Id=552885263003154, RoleId=252885263103721, MenuId=252885263055263 },
+
+            //// 平台管理
+            //new SysRoleMenu{ Id=552885263003200, RoleId=252885263103721, MenuId=252885263055300 },
+           
+            // 系统监控
+            new SysRoleMenu{ Id=552885263003231, RoleId=252885263103721, MenuId=252885263055360 },
+
+            //// 日志管理
+            //new SysRoleMenu{ Id=552885263003300, RoleId=252885263103721, MenuId=552885263055500 },
+            new SysRoleMenu{ Id=552885263003301, RoleId=252885263103721, MenuId=451000000000000 },
+            new SysRoleMenu{ Id=552885263003302, RoleId=252885263103721, MenuId=451500000000000 },
+            new SysRoleMenu{ Id=552885263003303, RoleId=252885263103721, MenuId=451500000000001 },
+            new SysRoleMenu{ Id=552885263003304, RoleId=252885263103721, MenuId=451500000000002 },
+
+
+
+
+        };
+    }
+}
