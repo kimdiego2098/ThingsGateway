@@ -22,7 +22,7 @@ public class GatewayLogJob : IJob
         using var serviceScope = _serviceProvider.CreateScope();
         var db = serviceScope.ServiceProvider.GetService<ISqlSugarClient>().CopyNew();
 
-        var daysAgo = 10; // 删除10天以前
+        var daysAgo = 7; // 删除7天以前
         await db.Deleteable<GatewayLogOp>().Where(u => (DateTime)u.CreateTime < DateTime.Now.AddDays(-daysAgo)).ExecuteCommandAsync(); // 删除网关日志
     }
 }

@@ -2,7 +2,6 @@
 /// <summary>
 /// 历史报警表
 /// </summary>
-[SugarTable("alarm_his")]
 [Description("历史报警表")]
 public class AlarmHis : EntityBaseId
 {

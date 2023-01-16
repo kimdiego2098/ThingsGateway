@@ -76,8 +76,8 @@
 
 ### 📖 帮助文档
 
-👉使用文档：（正在编写完善;未开放）
-* [ThingsGateway使用文档](https://diego2098.gitee.io/ThingsGateway)
+👉使用文档：（正在编写完善;）
+* [ThingsGateway使用文档](https://diego2098.gitee.io/thingsgateway/)
 
 👉后端文档：
 * [Furion](https://dotnetchina.gitee.io/furion/docs/source)
