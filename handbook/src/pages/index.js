@@ -102,44 +102,7 @@ function Gitee() {
       <h1 className={"ThingsGateway-big-title" + (isDarkTheme ? " dark" : "")}>
         ⭐️ Apache-2.0 开源协议，代码在 Gitee 平台托管 ⭐️
       </h1>
-      <div className="ThingsGateway-gitee-log">
-        <div
-          className="ThingsGateway-log-item"
-          style={{ border: "6px solid #723cff" }}
-        >
-          <div
-            className={"ThingsGateway-log-jiao" + (isDarkTheme ? " dark" : "")}
-          ></div>
-          <div className="ThingsGateway-log-number">
-            <div style={{ color: "#723cff" }}>1000 +</div>
-            <span className={isDarkTheme ? " dark" : ""}>Stars</span>
-          </div>
-        </div>
-        <div
-          className="ThingsGateway-log-item"
-          style={{ border: "6px solid #3fbbfe" }}
-        >
-          <div
-            className={"ThingsGateway-log-jiao" + (isDarkTheme ? " dark" : "")}
-          ></div>
-          <div className="ThingsGateway-log-number">
-            <div style={{ color: "#3fbbfe" }}>400 +</div>
-            <span className={isDarkTheme ? " dark" : ""}>Forks</span>
-          </div>
-        </div>
-        <div
-          className="ThingsGateway-log-item"
-          style={{ border: "6px solid #1fd898" }}
-        >
-          <div
-            className={"ThingsGateway-log-jiao" + (isDarkTheme ? " dark" : "")}
-          ></div>
-          <div className="ThingsGateway-log-number">
-            <div style={{ color: "#1fd898" }}>106,125</div>
-            <span className={isDarkTheme ? " dark" : ""}>Downloads</span>
-          </div>
-        </div>
-      </div>
+
     </div>
   );
 }
