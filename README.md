@@ -19,10 +19,6 @@
 2、报警服务：实时报警管理、历史报警存储。<br>
 3、时序数据存储。<br>
 
-### 😎 开发计划
-- 编写采集插件使用文档，添加Gitee Pages作为使用文档
-- 编写OPCUAClient驱动
-
 
 ### 😎 源码集成
 - AspNetCore框架集成于Admin.Net，并精简部分内容
@@ -56,27 +52,31 @@
 
 ### 🍄 快速启动
 
-* 后端：需要安装visual studio 2022开发环境
+**只适用发行版本（win64）,其他平台可直接下载源码编译**
 
-	打开ThingsGateway/ThingsGateway.sln解决方案，直接运行（F5）即可启动（数据库默认SQLite）
+#### （一）、下载发行版本
+[最新发行版本](https://gitee.com/diego2098/ThingsGateway/releases/latest) 
 
-* 前端：需要安装nodejs、cnpm、vscode等开发环境
+#### （二）、配置并启动系统
 
-	打开Web文件夹，1、安装依赖cnpm install .2、运行cnpm run dev.3、打包cnpm run build
+1、 解压发行版，右键管理员身份运行QuickStart.bat；
 
-* 插件集成：源码包含Drivers和Uploads文件夹，复制到运行目录即可（路径可配置）
+<img src="https://gitee.com/diego2098/ThingsGateway/raw/master/Image/QuickStart1.png"/>
+<img src="https://gitee.com/diego2098/ThingsGateway/raw/master/Image/QuickStart2.png"/>
 
-* 编译包：(https://gitee.com/diego2098/ThingsGateway/releases)
+**默认后端地址：http://*:5004;
+默认前端地址：http://*:8888;**
 
-    直接运行后端，前端可部署iis快速启动
+2、打开浏览器，输入前端地址http://localhost:8888/,正常显示则为启动成功
 
-* 浏览器访问：`http://localhost:8888` （默认前端端口为：8888，后台端口为：5004）
+<img src="https://gitee.com/diego2098/ThingsGateway/raw/master/Image/QuickStart3.png"/>
+
 
 
 
 ### 📖 帮助文档
 
-👉使用文档：（正在编写完善;）
+👉使用文档：（待完善）
 * [ThingsGateway使用文档](https://diego2098.gitee.io/thingsgateway/)
 
 👉后端文档：

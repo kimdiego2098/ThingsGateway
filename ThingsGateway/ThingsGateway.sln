@@ -53,6 +53,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{1215B421-C54
 		..\Image\4.png = ..\Image\4.png
 		..\Image\5.png = ..\Image\5.png
 		..\Image\pay.png = ..\Image\pay.png
+		..\Image\QuickStart1.png = ..\Image\QuickStart1.png
+		..\Image\QuickStart2.png = ..\Image\QuickStart2.png
+		..\Image\QuickStart3.png = ..\Image\QuickStart3.png
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThingsGateway.OPCDAClient", "Other\ThingsGateway.OPCDAClient\ThingsGateway.OPCDAClient.csproj", "{ACF4F9FF-E346-4D0B-B01B-6B79030ED9B8}"
