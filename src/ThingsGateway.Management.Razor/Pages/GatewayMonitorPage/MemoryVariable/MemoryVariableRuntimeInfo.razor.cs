@@ -217,7 +217,7 @@ public partial class MemoryVariableRuntimeInfo
 
     private Task OnColumnVisibleChanged(string name, bool visible)
     {
-        _cachedFields = table.GetVisibleColumns.ToArray();
+        // 列可见性变化不再缓存列快照：TriggerStateChanged 每次实时读取可见列，避免快照过期导致“列-值”错位
         return Task.CompletedTask;
     }
     private Task OnColumnCreating(List<ITableColumn> columns)
@@ -232,47 +232,58 @@ public partial class MemoryVariableRuntimeInfo
         return Task.CompletedTask;
     }
 
-    private ITableColumn[] _cachedFields = Array.Empty<ITableColumn>();
+    /// <summary>
+    /// 回传前端表格的状态数据：字段名（列身份）+ 每行对应的值
+    /// </summary>
+    public class VariableStateResult
+    {
+        /// <summary>
+        /// 当前可见列的字段名，顺序与 Rows 中每行的值一一对应
+        /// </summary>
+        public string[] Fields { get; set; } = Array.Empty<string>();
+
+        /// <summary>
+        /// 每行数据，每项按 Fields 的顺序存放单元格文本
+        /// </summary>
+        public List<List<string>> Rows { get; set; } = new();
+    }
 
     [JSInvokable]
-    public List<List<string>> TriggerStateChanged()
+    public VariableStateResult TriggerStateChanged()
     {
         try
         {
-            if (table == null) return null;
-            List<List<string>> ret = new();
-            if (_cachedFields.Length == 0) _cachedFields = table.GetVisibleColumns.ToArray();
-            foreach (var row in table.Rows)
+            if (table == null) return new VariableStateResult();
+
+            // 每次实时获取当前可见列，不使用快照，避免列顺序变化后与 DOM 脱节
+            var columns = table.GetVisibleColumns.ToArray();
+            var fields = new string[columns.Length];
+            for (var i = 0; i < columns.Length; i++)
             {
-                var list = new List<string>(_cachedFields.Length);
-                foreach (var col in _cachedFields)
-                {
-                    var fieldName = col.GetFieldName();
-                    list.Add(VariableModelUtils.GetValue(row, fieldName));
-                }
-                ret.Add(list);
+                fields[i] = columns[i].GetFieldName();
             }
 
-            return ret;
+            var rows = new List<List<string>>();
+            foreach (var row in table.Rows)
+            {
+                var list = new List<string>(fields.Length);
+                for (var i = 0; i < fields.Length; i++)
+                {
+                    list.Add(VariableModelUtils.GetValue(row, fields[i]));
+                }
+                rows.Add(list);
+            }
 
+            return new VariableStateResult { Fields = fields, Rows = rows };
         }
         catch (Exception)
         {
-            return new();
+            return new VariableStateResult();
         }
     }
 
 
     #endregion
-
-    protected override void OnAfterRender(bool firstRender)
-    {
-        if (firstRender || _cachedFields.Length == 0)
-        {
-            _cachedFields = table.GetVisibleColumns.ToArray();
-        }
-        base.OnAfterRender(firstRender);
-    }
 
 #if !Management
     [Parameter]

@@ -28,11 +28,16 @@ export function init(id, invoke, options) {
         var { method } = options;
 
         if (!invoke) return;
-        var valss = await invoke.invokeMethodAsync(method);
-        if (valss == null) return;
-        for (let rowIndex = 0; rowIndex < valss.length; rowIndex++) {
+        var result = await invoke.invokeMethodAsync(method);
+        if (result == null) return;
 
-            const vals = valss[rowIndex];
+        var fields = result.fields ?? result.Fields;
+        var rows = result.rows ?? result.Rows;
+        if (!fields || !rows) return;
+
+        for (let rowIndex = 0; rowIndex < rows.length; rowIndex++) {
+
+            const vals = rows[rowIndex];
             if (vals == null) continue;
 
 
@@ -40,13 +45,16 @@ export function init(id, invoke, options) {
             if (!row) continue;
 
 
-            for (let i = 0; i < vals.length; i++) {
+            for (let i = 0; i < fields.length; i++) {
+
+                const field = fields[i];
+                if (!field) continue;
 
                 const cellValue = vals[i];
                 if (cellValue == null) continue;
 
-                //var cell = getCellByClass(row, cellName)
-                var cell = row.cells[i + 2]
+                // 按列身份（data-field）定位单元格，避免单元格顺序变化导致错位
+                var cell = row.querySelector(`td[data-field="${CSS.escape(field)}"]`)
 
                 if (!cell) continue;
 
@@ -127,7 +135,7 @@ export function init(id, invoke, options) {
 export function dispose(id) {
     const handler = handlers[id];
     if (handler) {
-        clearInterval(handler.timer);
+        clearInterval(handler.variableHandler);
         handler.invoke = null;
         delete handlers[id];
     }

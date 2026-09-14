@@ -93,7 +93,7 @@
 
         @foreach (var col in context.Columns)
         {
-            <td class="@GetFixedCellClassString(col, context)" style="@GetFixedCellStyleString(col, context)" @key=col>
+            <td class="@GetFixedCellClassString(col, context)" style="@GetFixedCellStyleString(col, context)" data-field="@col.GetFieldName()" @key=col>
                 @{
                     var name = col.GetFieldName();
                     var data = VariableModelUtils.GetValue(context.Row, name);
