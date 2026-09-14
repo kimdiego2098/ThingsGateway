@@ -11,6 +11,12 @@
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://thingsgateway.cn/docs/1)
 [![QQ](https://img.shields.io/badge/QQ群-605534569-red)](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=NnBjPO-8kcNFzo_RzSbdICflb97u2O1i&authKey=V1MI3iJtpDMHc08myszP262kDykbx2Yev6ebE4Me0elTe0P0IFAmtU5l7Sy5w0jx&noverify=0&group_code=605534569)
 
+# 专业版
+
+- [官网地址](https://runtime.thingsgateway.cn/)
+
+.NET10+VUE架构，上百个采集/转发插件，一千变量以下可免费商用，详情可查看官方网站。
+
 
 ## 📋 项目简介
 
@@ -21,7 +27,6 @@ ThingsGateway 采用模块化与插件化架构，支持多种工业通信协议
 
 
 
-- [前后端分离版本官网地址](https://runtime.thingsgateway.cn/)
 - [官网地址](https://thingsgateway.cn/)
 - [版权声明](https://thingsgateway.cn/docs/1)
 - [赞助途径](https://thingsgateway.cn/docs/1000)
@@ -100,25 +105,32 @@ ThingsGateway 采用模块化与插件化架构，支持多种工业通信协议
 
 ## 🧩 PRO 插件与商业支持
 
-在保持 **ThingsGateway 核心功能完全开源** 的同时，项目还提供 **PRO 付费插件**，用于满足更复杂、更专业的工业通信与企业级应用需求。
+查看专业版
 
-PRO 插件主要面向对 **协议覆盖面、稳定性、现场兼容性** 要求较高的工业场景，作为开源版本的能力补充，可按需选用。
+- [官网地址](https://runtime.thingsgateway.cn/)
 
----
+原非源码授权的用户，可迁移到runtime版本
 
-### 🚀 PRO 通讯协议支持
+>在保持 **ThingsGateway 核心功能完全开源** 的同时，项目还提供 **PRO 付费插件**，用于满足更复杂、更专业的工业通信与企业级应用需求。
 
-[PRO](https://thingsgateway.cn/docs/1001) 插件提供对多种 **主流工业通信协议** 的支持，包括但不限于：
+>PRO 插件主要面向对 **协议覆盖面、稳定性、现场兼容性** 要求较高的工业场景，作为开源版本的能力补充，可按需选用。
 
-- **FINS**（欧姆龙 FINS）
-- **CIP / EtherNet/IP**（罗克韦尔 / Allen-Bradley）
-- **MC Protocol**（三菱MC）
-- **IEC 60870-5-104（IEC104 北向）**
-- **OPC AE**（报警与事件）
-- **VIGOR** (丰炜)
-- **SECS / SECS-I / HSMS**（半导体设备通信）
+>---
 
----
+>### 🚀 PRO 通讯协议支持
+
+>[PRO](https://thingsgateway.cn/docs/1001) 插件提供对多种 **主流工业通信协议** 的支持，包括但不限于：
+
+>- **FINS**（欧姆龙 FINS）
+>- **CIP / EtherNet/IP**（罗克韦尔 / Allen-Bradley）
+>- **MC Protocol**（三菱MC）
+>- **IEC 60870-5-104（IEC104 北向）**
+>- **OPC AE**（报警与事件）
+>- **VIGOR** (丰炜)
+>- **SECS / SECS-I / HSMS**（半导体设备通信）
+
+>---
+
 
 
 
